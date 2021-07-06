@@ -7,3 +7,14 @@
 * Run `docker compose up -d --restart unless-stopped` in this directory
 * Create a bucket `compass-eo` in minio if it does not already exist
 
+Deploy:
+
+    #local:
+    git archive main --output deploy.zip 
+    pscp deploy.zip eouser@eo-stack:/home/eouser/
+
+    #remote:
+    unzip deploy.zip -d compose
+    cd compose
+    docker-compose down
+    docker-compose up
