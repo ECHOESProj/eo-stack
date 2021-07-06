@@ -1,0 +1,20 @@
+services:
+  web:
+    image: websocketsserver
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - WEBAPIKEY
+  minio:
+    image: minio/minio
+    restart: always
+    ports:
+        - "9000:9000"
+    volumes:
+        - eo-vol:/data
+    command: server /data
+volumes:
+    eo-vol:
