@@ -17,4 +17,4 @@ Deploy:
     unzip deploy.zip -d compose
     cd compose
     docker-compose down
-    docker-compose up
+    docker-compose up -d
