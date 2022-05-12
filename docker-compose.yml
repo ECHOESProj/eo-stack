@@ -1,6 +1,6 @@
 services:
   web:
-    image: websocketsserver
+    image: websockets-server
     restart: always
     ports:
       - "3000:3000"
