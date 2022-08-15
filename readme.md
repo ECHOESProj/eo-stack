@@ -14,6 +14,7 @@ The .env file is created on first deployment only, and is not overwritten on sub
 The API key is just a long password and is stored in LastPass under name eo-stack config
 
 Commands:
+
     #local:
     git archive main --output deploy.zip 
     pscp deploy.zip eouser@eo-stack:/home/eouser/
