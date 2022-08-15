@@ -9,9 +9,9 @@
 
 
 # Deploy to server
-A .env file is used to set the WEBAPIKEY environment variable and have it persist across restarts and re-deployments/updates
-The .env file is created on first deployment only, and is not overwritten on subsequent deployments unless needed
-The API key is just a long password and is stored in LastPass under name eo-stack config
+A .env file is used to set the WEBAPIKEY environment variable and have it persist across restarts and re-deployments/updates. 
+The .env file is created on first deployment only, and is not overwritten on subsequent deployments unless needed. 
+The API key is just a long password and is stored in LastPass under name eo-stack config.
 
 Commands:
 
