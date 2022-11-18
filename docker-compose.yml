@@ -8,6 +8,11 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - WEBAPIKEY
+
+  # Minio is used where there is no S3 available, as it provides an S3 compatible service.
+  # For example, when running on AWS or CREODIAS an S3 service is available,
+  # and therefore Minio is not required, but it is required when running on a local machine.
+  # Therefore, when running on AWS or CREODIAS, Minio could be deactivated, as it is redundant.
   minio:
     image: minio/minio
     restart: always
