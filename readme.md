@@ -29,6 +29,12 @@ Commands:
 
     # Only need to run this on first deploy or if changing API key
     echo "WEBAPIKEY = xxx" > .env
+    
+    # Forward port 80 to 3000
+    sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000
+    
+    # Make persistent
+    sudo apt install iptables-persistent
 
     docker-compose down
     docker-compose up -d
